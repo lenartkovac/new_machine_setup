@@ -24,8 +24,37 @@ then
 	git clone https://github.com/sobolevn/sobole-zsh-theme.git $(echo $RESOURCE_DIR/$THEME_DIR)
 fi
 
-if [ ! -d $(echo $HOME/.oh-my-zsh/custom/themes/$THEME_NAME) ]
+# if theme doesn't exist add it
+if [ ! -d $(echo $ZSH_CUSTOM/themes/$THEME_NAME) ]
 then
 	echo Creating symbolic link to theme into oh my zsh
-	ln -s $(echo $RESOURCE_DIR/$THEME_DIR/$THEME_NAME) $(echo $HOME/.oh-my-zsh/custom/themes/$THEME_NAME)
+	ln -s $(echo $RESOURCE_DIR/$THEME_DIR/$THEME_NAME) $(echo $ZSH_CUSTOM/themes/$THEME_NAME)
 fi
+
+if [ ! -d $(echo $ZSH_CUSTOM/plugins/zsh-syntax-highlighting) ]
+then
+	echo Installing zsh-syntax-autocompletions
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+fi
+
+if [ ! -d $(echo $ZSH_CUSTOM/plugins/zsh-autosuggestions) ]
+then
+	echo Installing zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+
+
+# if on mac, install homebrew
+
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+
+
+
+
+
+
+
+
+
