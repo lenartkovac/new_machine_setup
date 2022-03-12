@@ -17,10 +17,6 @@ SOBOLE_DEFAULT_USER="klynx"
 ## Custom aliases
 #alias vim="nvim"
 alias clc="clear"
-alias python="/usr/local/bin/python3"
-alias nettest="ping 8.8.8.8"
-
-eval $(thefuck --alias)
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
