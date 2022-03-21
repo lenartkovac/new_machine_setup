@@ -12,7 +12,12 @@ configures oh-my-zsh theme, additional plugins and copies the .zshrc file
 
 Dedicated for MacOS. Installs the HomeBrew package manager
 
+### NeoVim
+
+
+
 TODO: 
 
 - NVIM
 	- setup files
+	- script that auto installs and does stuff
